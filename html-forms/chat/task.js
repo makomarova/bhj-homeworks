@@ -15,7 +15,7 @@ messageInput.addEventListener('keyup', event => {
         let botMessages = ['Добрый день, до свидания', 'Кто тут?', 'Где ваша совесть?', 'К сожалению, все операторы заняты. Не пишите нам.', 'Мы ничего не будем вам продавать!'];
         const botMessage = botMessages[Math.floor(Math.random() * botMessages.length)];
         chatMessages.innerHTML += `<div class="message">
-            div class="message__time">${ time.getHours() }:${ time.getMinutes() }</div>
+            <div class="message__time">${ time.getHours() }:${ time.getMinutes() }</div>
             <div class="message__text"> ${botMessage}</div>
             </div>`;
     }
