@@ -1,10 +1,11 @@
 const addTaskBtn = document.getElementById('tasks__add');
 const taskInput = document.getElementById('task__input');
 const tasksList = document.getElementById('tasks__list');
+const form = document.getElementById('tasks__form');        
 
-taskInput.addEventListener('keyup', event => {
+form.addEventListener('submit', event => {
     event.preventDefault();
-    if (event.code === 'Enter' && taskInput.value != '') {
+    if ( taskInput.value != '') {
         const element = document.createElement('div');
         element.classList.add('task');
         element.innerHTML += `
