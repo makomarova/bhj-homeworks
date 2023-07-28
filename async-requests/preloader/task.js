@@ -2,10 +2,8 @@ const loader =document.querySelector('.loader ');
 const items = document.getElementById('items');
 const xhr = new XMLHttpRequest();
 xhr.open('GET', 'https://students.netoservices.ru/nestjs-backend/slow-get-courses');
-xhr.addEventListener('readystatechange', function() {
-    if (this.readyState == xhr.DONE && this.status == 200) {
+xhr.addEventListener('load', function() {
         loader.classList.remove('loader_active');
-
         let response = JSON.parse(xhr.responseText).response.Valute;
         console.log(response);
         for (var key in response)  {
@@ -16,6 +14,5 @@ xhr.addEventListener('readystatechange', function() {
                 <\div>`;
             items.innerHTML += html;
         }
-    }
 });
 xhr.send();
