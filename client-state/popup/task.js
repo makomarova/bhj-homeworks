@@ -10,7 +10,7 @@ function getCookie(name){
     return cookie.substring(name.lenght + 1);
 }
 
-if((getCookie(modalClose) === null) || (getCookie(modalClose) !== 'true')){
+if((getCookie('modalClose') === null) || (getCookie('modalClose') !== 'true')){
     modal.classList.add('modal_active');
 }
 
